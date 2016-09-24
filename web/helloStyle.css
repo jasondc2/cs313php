@@ -1,0 +1,38 @@
+body {
+	background-color: lightgrey;
+}
+
+h1 {
+	display: block;
+    font-family: "Antic Slab", Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-style: bold;
+    text-align: center;
+}
+
+h2 {
+	font-size: 25px;
+    font-family: "Antic Slab", Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+p {
+	display: block;
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1em;
+}
+
+button {
+    padding:15px;
+    background:#00b2ff;
+    border:0px;
+    color:#fcfcfc;
+    padding-left:25px;
+    padding-right:25px;
+    cursor:pointer;
+}
+
+button:hover {
+    background:#000000;
+}
