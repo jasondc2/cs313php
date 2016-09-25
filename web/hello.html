@@ -13,6 +13,31 @@
        else
           e.style.display = 'block';
    }
+
+   function toggle_visibility1(content_2) {
+       var e = document.getElementById("content_2");
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+   }
+
+   function toggle_visibility2(content_3) {
+       var e = document.getElementById("content_3");
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+   }
+
+   function toggle_visibility3(content_4) {
+       var e = document.getElementById("content_4");
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+   }
+
 </script>
 });
 
@@ -31,9 +56,9 @@
   		
   		<div id="nav">
   			<button id="family" onclick="toggle_visibility('content_1')">Family</button>
-  			<button id="work">Work</button>
-  			<button id="school">School</button>
-  			<button id="hobbies">Hobbies</button>
+  			<button id="work" onclick="toggle_visibility1('content_2')">Work</button>
+  			<button id="school" onclick="toggle_visibility2('content_3')">School</button>
+  			<button id="hobbies" onclick="toggle_visibility3('content_4')">Hobbies</button>
   			<button id="assignments">Assignments</button>
   		</div>
 
