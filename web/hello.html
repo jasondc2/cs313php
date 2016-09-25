@@ -2,6 +2,8 @@
 <header>
 	<link rel="stylesheet" type="text/css" href="helloStyle.css">
 
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
 	 <meta name="viewport" content="width=device-width">
 
 	<title>Jason Christensen</title>
@@ -14,20 +16,20 @@
   		<img class="mainImage" alt="cover" src="images/pic1.jpg">
   		
   		<div id="nav">
-  			<button id="family">Family</button>
-  			<button id="work">Work</button>
+  			<button ng-click="selectOne()">Family</button>
+  			<button ng-click="selectTwo()">Work</button>
   			<button id="school">School</button>
   			<button id="hobbies">Hobbies</button>
   			<button id="assignments">Assignments</button>
   		</div>
 
-  		<div id="content_1">
+  		<div ng-show="myVarOne">
   			<p>I come from a family of 8. We have 3 boys and 3 girls. All of the boy names start with "J" and all of the girl names start with "H". So that is kind of weird, but it is fun.</p>
 
   			<p>I am from Shelley, Idaho, born and raised. My wife and I currently live in Shelley. We have been married for 1 1/2 years now. We are excited for welcome our first child into our family in February.<p>
   		</div>
 
-  		<div id="content_2">
+  		<div ng-show="myVarTwo">
   			<p>I am currently working at a company in Idaho Falls. My job self described job title is Documentation Architect, which is a fancy way of saying I organize the technical documents for the machines.</p>
 
   			<p>Most of my previous work experience has had nothing to do with software or writing code. The closest thing to it that I have done is working on a company's website, but even that was with WordPress. So I look forward to doing an internship to get applicable experience.</p>
@@ -46,6 +48,56 @@
   		</div>
 
   	</div>
+
+    <script>
+angular.module('myApp', []).controller('demoCtrl', function($scope, $location) {
+  $scope.myVarOne = false;
+  $scope.myVarTwo = false;
+  $scope.myVarThree = false;
+  $scope.myVarFour = false;
+
+  $scope.selectOne = function() {
+        $scope.myVarOne = !$scope.myVarOne;
+        $scope.myVarTwo = false;
+        $scope.myVarThree = false;
+        $scope.myVarFour = false;
+  };
+  $scope.selectTwo = function() {
+        $scope.myVarTwo = !$scope.myVarTwo;
+        $scope.myVarOne = false;
+        $scope.myVarThree = false;
+        $scope.myVarFour = false;
+         $scope.products = ["C++", "Java", "PHP"];
+    $scope.addItem = function () {
+        $scope.errortext = "";
+        if (!$scope.addMe) {return;}
+        if ($scope.products.indexOf($scope.addMe) == -1) {
+            $scope.products.push($scope.addMe);
+        } else {
+            $scope.errortext = "The item is already in your list.";
+        }
+    }
+    $scope.removeItem = function (x) {
+        $scope.errortext = "";
+        $scope.products.splice(x, 1);
+    } 
+  };
+  $scope.selectThree = function() {
+        $scope.myVarThree = !$scope.myVarThree;
+        $scope.myVarTwo = false;
+        $scope.myVarOne = false;
+        $scope.myVarFour = false;
+  };
+  $scope.selectFour = function() {
+        $scope.myVarFour = !$scope.myVarFour;
+        $scope.myVarTwo = false;
+        $scope.myVarThree = false;
+        $scope.myVarOne = false;
+  };
+  $scope.myUrl = $location.absUrl();
+});
+</script>
+
 
   
 </body>
