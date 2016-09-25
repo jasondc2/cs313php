@@ -41,6 +41,8 @@ button:hover {
     width: 70%;
     margin-left: 15%;
     background-color: white;
+    height: 100%;
+    
 }
 
  #nav {
