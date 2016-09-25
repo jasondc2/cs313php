@@ -6,8 +6,14 @@
 
   <script type="text/javascript">
 
-  $('#btn').click(function() {
-    $('#content1').toggle();
+   function toggle_visibility(content_1) {
+       var e = document.getElementById("content_1");
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+   }
+</script>
 });
 
   </script>
@@ -24,7 +30,7 @@
   		<img class="mainImage" alt="cover" src="images/pic1.jpg">
   		
   		<div id="nav">
-  			<button id="family">Family</button>
+  			<button id="family" onclick="toggle_visibility('content_1')">Family</button>
   			<button id="work">Work</button>
   			<button id="school">School</button>
   			<button id="hobbies">Hobbies</button>
