@@ -7,7 +7,7 @@
   <script type="text/javascript">
 
   $('#btn').click(function() {
-    $('#content_1').toggle();
+    $('#content').toggle();
 });
 
   </script>
@@ -24,7 +24,7 @@
   		<img class="mainImage" alt="cover" src="images/pic1.jpg">
   		
   		<div id="nav">
-  			<button id="family">Family</button>
+  			<button id="family" onclick="toggle_visibility('content_1')">Family</button>
   			<button id="work">Work</button>
   			<button id="school">School</button>
   			<button id="hobbies">Hobbies</button>
