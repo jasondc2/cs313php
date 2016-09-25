@@ -55,3 +55,7 @@ button:hover {
     margin-left: 5%;
 }
 
+.mainImage {
+    width: 70%;
+    height: auto;
+}
