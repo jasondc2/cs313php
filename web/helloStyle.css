@@ -16,6 +16,11 @@ h2 {
     text-align: center;
 }
 
+h3 {
+    text-align: center;
+    margin-top: 50%;
+}
+
 p {
 	display: block;
     font-family: "PT Sans", Arial, Helvetica, sans-serif;
