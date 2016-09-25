@@ -39,4 +39,12 @@ button:hover {
 
 #content {
     width: 70%;
+    margin-left: 15%;
+    background-color: smokewhite;
 }
+
+ #nav {
+    float: right;
+    width: 225px;
+}
+
