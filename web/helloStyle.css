@@ -41,7 +41,7 @@ button:hover {
     width: 70%;
     margin-left: 15%;
     background-color: white;
-    height: 700px;
+    height: 1200px;
     box-shadow: 7px 7px 3px grey;
     border: 2px solid grey;
 }
@@ -49,6 +49,7 @@ button:hover {
  #nav {
    display: block;
    margin-left: 25%;
+   margin-top: 5px;
 }
 
 #content_1, #content_2, #content_3, #content_4 {
@@ -56,6 +57,6 @@ button:hover {
 }
 
 .mainImage {
-    width: 1000px;
+    width: 1027px;
     height: auto;
 }
