@@ -36,3 +36,7 @@ button {
 button:hover {
     background:#000000;
 }
+
+#content {
+    width: 70%;
+}
