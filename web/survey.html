@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Review Page
+	</title>
+</head>
+<body>
+<p><center><h1>Purchase Review</h1></center><br></p>
+<?php
+
+$getTotal = $_POST["total"];
+
+echo "<b>First Name: </b>" . $_POST["firstName"] . "<br>";
+echo "<b>Last Name: </b>" . $_POST["lastName"] . "<br>";
+echo "<b>Email Address: </b>" . $_POST["emailAddress"] . "<br>";
+echo "<b>Phone Number: </b>" . $_POST["phoneNumber"] . "<br>";
+echo "<b>Shipping Address: </b>" . $_POST["address"] . ", " . $_POST["city"] . ", " . $_POST["zipCode"] . ", " . $_POST["state"] . "<br>";
+echo "<b>Credit Card Information: </b>" . $_POST["cardNumber"] . ", " . $_POST["cardType"] . ", " . $_POST["expDate"] . "<br>";
+
+echo "$getTotal";
+
+
+?>
+
+<form action="decide.php" method="post" style="width:960px; margin:auto;">
+
+<input type="submit" name="answer" value="Accept" style="border:0px; width:350px;height:50px;cursor:pointer;background:#00b2ff;margin-left:305px; margin-top:25px;font-size:18px; font-family: "PT Sans", Arial, Helvetica, sans-serif;">
+<input type="submit" name="answer" value="Cancel" style="border:0px; width:350px;height:50px;cursor:pointer;background:#00b2ff;margin-left:305px; margin-top:25px;font-size:18px; font-family: "PT Sans", Arial, Helvetica, sans-serif;">
+
+</form> 
+</body>
+</html>
