@@ -2,7 +2,11 @@
 
     $age = $gender = $race = $residence = "";
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if($_POST["action"] == "Submit")
+    {
+        echo "<center><h1>Survey Submitted</h1></center>";
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if(isset($_POST['age'])){
 
@@ -28,7 +32,24 @@
 
         }
 
+        }
     }
+    else
+    {
+        echo "<center><h1>Survey Saved/h1></center>";
+        $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
+        $age = $_POST["age"];
+        fwrite($myfile, $age);
+        $gender = $_POST["gender"];
+        fwrite($myfile, $gender);
+        $race = $_POST["race"];;
+        fwrite($myfile, $race);
+        $residence = $_POST["residence"];;
+        fwrite($myfile, $residence);
+        fclose($myfile);
+    }
+
+
 
 
 
