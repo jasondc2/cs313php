@@ -5,25 +5,25 @@
 
         if(isset($_POST['age'])){
 
-            $major = $_POST["age"];
+            $age = $_POST["age"];
 
         }
 
         if(isset($_POST['gender'])){
 
-            $major = $_POST["gender"];
+            $gender = $_POST["gender"];
 
         }
 
         if(isset($_POST['race'])){
 
-            $major = $_POST["race"];
+            $race = $_POST["race"];
 
         }
 
         if(isset($_POST['residence'])){
 
-            $major = $_POST["residence"];
+            $residence = $_POST["residence"];
 
         }
 
