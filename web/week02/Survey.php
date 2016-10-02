@@ -36,7 +36,7 @@
     }
     else
     {
-        echo "<center><h1>Survey Saved/h1></center>";
+        echo "<center><h1>Survey Saved</h1></center>";
         $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
         $age = $_POST["age"];
         fwrite($myfile, $age);
