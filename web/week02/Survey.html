@@ -7,51 +7,54 @@
 
 <body>
 
+     <div id="content">
+
+          <h1>Average Demographic</h1>
+
+          <h2>Please select the answer most applicable to you</h2>
+
      <form action="Survey.php" method="post">
 
-          <div id="content">
+          <b>Age:</b><br>
 
-          <b>Name:</b> <input type="text" name="name"><br><br>
+               <input type="radio" name="age" value="12-18">12 - 18<br>
 
-          <b>Email:</b> <input type="text" name="email"><br><br>
+               <input type="radio" name="age" value="19-26">19 - 26<br>
 
-          <b>Major:</b><br>
+               <input type="radio" name="age" value="27-40">27 - 40<br>
 
-               <input type="radio" name="major" value="Computer Science">Computer Science<br>
-
-               <input type="radio" name="major" value="Web Development and Design">Web Development and Design<br>
-
-               <input type="radio" name="major" value="Computer Information Technology">Computer Information Technology<br>
-
-               <input type="radio" name="major" value="Computer Engineering">Computer Engineering
+               <input type="radio" name="age" value="41-65">41 - 65
 
           <br><br>
 
-                     
+          <b>Gender:</b><br>
 
-          <b>Places you have been:</b><br>
+               <input type="radio" name="gender" value="Male">Male<br>
 
-          <input type="checkbox" name="checkbox[]" value="North America">North America<br>
-
-          <input type="checkbox" name="checkbox[]" value="South America">South America<br>
-
-          <input type="checkbox" name="checkbox[]" value="Europe">Europe<br>
-
-          <input type="checkbox" name="checkbox[]" value="Asia">Asia<br>
-
-          <input type="checkbox" name="checkbox[]" value="Australia">Australia<br>
-
-          <input type="checkbox" name="checkbox[]" value="Africa">Africa<br>
-
-          <input type="checkbox" name="checkbox[]" value="Antartica">Antartica
+               <input type="radio" name="major" value="Female">Female<br>
 
           <br><br>
 
+          <b>Race:</b><br>
 
+               <input type="radio" name="race" value="Caucasian">Caucasian<br>
 
-          <b>Your comments:</b><br><textarea cols="30" rows="4" name="comments"></textarea>
+               <input type="radio" name="race" value="Hispanic">Hispanic<br>
+
+               <input type="radio" name="race" value="African-American">African-American<br>
+
+               <input type="radio" name="race" value="Other">Other
 
           <br><br>
+
+          <b>Residence:</b><br>
+
+               <input type="radio" name="residence" value="Own">Own<br>
+
+               <input type="radio" name="residence" value="Rent">Rent<br>
+
+          <br><br>
+
 
           <input type="submit">
 

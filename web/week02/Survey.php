@@ -1,36 +1,31 @@
 <?php 
 
-    $name = $email = $major = $places = $comments = "";
+    $age = $gender = $race = $residence = "";
 
 
+        if(isset($_POST['age'])){
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-        if(isset($_POST['name'])){
-
-            $name = htmlspecialchars($_POST['name']);
+            $major = $_POST["age"];
 
         }
 
-        if(isset($_POST['email'])){
+        if(isset($_POST['gender'])){
 
-            $email = htmlspecialchars($_POST["email"]);
-
-        }
-
-        if(isset($_POST['major'])){
-
-            $major = $_POST["major"];
+            $major = $_POST["gender"];
 
         }
 
-        if(!empty($_POST['checkbox'])){
+        if(isset($_POST['race'])){
 
-            $places = $_POST['checkbox'];
+            $major = $_POST["race"];
 
         }
 
-        $comments = htmlspecialchars($_POST["comments"]);
+        if(isset($_POST['residence'])){
+
+            $major = $_POST["residence"];
+
+        }
 
     }
 
@@ -44,35 +39,19 @@
 
 <body>
 
-    <a href="week03ta.html">Back to Form</a><br><br>
+    <a href="Survey.html">Back to Form</a><br><br>
 
-    <b>Name:</b> <?php echo $name; ?><br><br>
+    <b>Age:</b> <?php echo $age; ?><br><br>
 
-    <b>Email:</b> <a href="mailto:<?php echo $email; ?>"><?php echo $email;?></a><br><br>
+    <b>Gender:</b> <?php echo $gender; ?><br><br>
 
-    <b>Major:</b> <?php echo $major; ?><br><br>
+    <b>Race:</b> <?php echo $race; ?><br><br>
 
-    <b>Places you have been:</b><br>
-
-     <?php 
-
-        if(!empty($places)){
-
-            foreach($places as $check){
-
-                echo $check . "<br>";
-
-            }
-
-        }
-
-        ?>
+    <b>Residence:</b> <?php echo $residence; ?><br><br>
 
     <br>
 
-    <b>Your comments:</b><br/>
-
-    <?php echo $comments; ?>
+    <h3>Thank You</h3>
 
 
 
