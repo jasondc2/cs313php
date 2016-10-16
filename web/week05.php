@@ -31,35 +31,41 @@ catch (PDOException $ex) {
  die();
 }
 
-if($_POST["getClasses"] == "Check")
+if($_POST["getData"] == "Classes")
 {
 	foreach ($db->query('SELECT name, grade FROM class') as $row)
 	{
-	 print '<p>';
-	 print '<strong>' . $row['name'] . ' ' . $row['grade'] . '.';
-	 print '<p>';
+		print '<p>';
+		print '<strong>' . $row['name'] . ' ' . $row['grade'] . '.';
+		print '<p>';
 	}
 }
-
-foreach ($db->query('SELECT due, start, complete FROM date') as $row)
+else if($_POST["getData"] == "Dates")
 {
- print '<p>';
- print '<strong>' . $row['due'] . ' ' . $row['start'] . ' ' . $row['complete'] . '.';
- print '<p>';
+	foreach ($db->query('SELECT due, start, complete FROM date') as $row)
+	{
+ 		print '<p>';
+ 		print '<strong>' . $row['due'] . ' ' . $row['start'] . ' ' . $row['complete'] . '.';
+ 		print '<p>';
+	}
 }
-
-foreach ($db->query('SELECT expected, received FROM grade') as $row)
+else if($_POST["getData"] == "Grades")
 {
- print '<p>';
- print '<strong>' . $row['expected'] . ' ' . $row['received'] . '.';
- print '<p>';
+	foreach ($db->query('SELECT expected, received FROM grade') as $row)
+	{
+ 		print '<p>';
+ 		print '<strong>' . $row['expected'] . ' ' . $row['received'] . '.';
+ 		print '<p>';
+	}
 }
-
-foreach ($db->query('SELECT expected, actual FROM time') as $row)
+else if($_POST["getData"] == "Time")
 {
- print '<p>';
- print '<strong>' . $row['expected'] . ' ' . $row['actual'] . '.';
- print '<p>';
+	foreach ($db->query('SELECT expected, actual FROM time') as $row)
+	{
+ 		print '<p>';
+		print '<strong>' . $row['expected'] . ' ' . $row['actual'] . '.';
+ 		print '<p>';
+	}
 }
 
 
