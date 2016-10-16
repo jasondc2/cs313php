@@ -31,9 +31,11 @@ catch (PDOException $ex) {
  die();
 }
 
-foreach ($db->query('SELECT now()') as $row)
+foreach ($db->query('SELECT name, grade FROM class') as $row)
 {
- print "<p>$row[0]</p>\n\n";
+ print '<p>';
+ print '<strong>' . $row['name'] . ' ' . $row['grade'] . '.';
+ print '<p>';
 }
 
 ?>
