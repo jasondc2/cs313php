@@ -43,7 +43,7 @@ if($_POST["getData"] == "Classes")
 }
 else if($_POST["getData"] == "Dates")
 {
-	print '<p><strong>Due    Start    Complete</strong></p>';
+	print '<p><strong>Due     Start     Complete</strong></p>';
 
 	foreach ($db->query('SELECT due, start, complete FROM date') as $row)
 	{	
@@ -67,7 +67,7 @@ else if($_POST["getData"] == "Time")
 
 	foreach ($db->query('SELECT expected, actual FROM time') as $row)
 	{
-		print '<p>' . $row['expected'] . 'Hours ' . $row['actual'] . 'Hours';
+		print '<p>' . $row['expected'] . ' Hours ' . $row['actual'] . ' Hours';
  		print '<p>';
 	}
 }
