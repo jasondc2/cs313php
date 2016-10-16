@@ -31,11 +31,14 @@ catch (PDOException $ex) {
  die();
 }
 
-foreach ($db->query('SELECT name, grade FROM class') as $row)
+if($_POST["getClasses"] == "Check")
 {
- print '<p>';
- print '<strong>' . $row['name'] . ' ' . $row['grade'] . '.';
- print '<p>';
+	foreach ($db->query('SELECT name, grade FROM class') as $row)
+	{
+	 print '<p>';
+	 print '<strong>' . $row['name'] . ' ' . $row['grade'] . '.';
+	 print '<p>';
+	}
 }
 
 foreach ($db->query('SELECT due, start, complete FROM date') as $row)
