@@ -35,8 +35,8 @@ if($_POST["getData"] == "Classes")
 {
 	foreach ($db->query('SELECT name, grade FROM class') as $row)
 	{
-		print '<p>';
-		print '<strong>' . $row['name'] . ' ' . $row['grade'] . '.';
+		print '<p><strong>Name   Grade</strong>';
+		print '<p>' . $row['name'] . ' ' . $row['grade'] . '%';
 		print '<p>';
 	}
 }
@@ -44,8 +44,8 @@ else if($_POST["getData"] == "Dates")
 {
 	foreach ($db->query('SELECT due, start, complete FROM date') as $row)
 	{
- 		print '<p>';
- 		print '<strong>' . $row['due'] . ' ' . $row['start'] . ' ' . $row['complete'] . '.';
+ 		print '<p><strong>Due    Start    Complete</strong></p>';
+ 		print '<p>' . $row['due'] . ' ' . $row['start'] . ' ' . $row['complete'];
  		print '<p>';
 	}
 }
@@ -53,8 +53,8 @@ else if($_POST["getData"] == "Grades")
 {
 	foreach ($db->query('SELECT expected, received FROM grade') as $row)
 	{
- 		print '<p>';
- 		print '<strong>' . $row['expected'] . ' ' . $row['received'] . '.';
+ 		print '<p><strong>Expected Received</strong>';
+ 		print '<p>' . $row['expected'] . '%   ' . $row['received'] . '%';
  		print '<p>';
 	}
 }
@@ -62,8 +62,8 @@ else if($_POST["getData"] == "Time")
 {
 	foreach ($db->query('SELECT expected, actual FROM time') as $row)
 	{
- 		print '<p>';
-		print '<strong>' . $row['expected'] . ' ' . $row['actual'] . '.';
+ 		print '<p><strong>Expected Actual</strong>';
+		print '<p>' . $row['expected'] . 'Hours ' . $row['actual'] . 'Hours';
  		print '<p>';
 	}
 }
