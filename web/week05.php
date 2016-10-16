@@ -38,6 +38,28 @@ foreach ($db->query('SELECT name, grade FROM class') as $row)
  print '<p>';
 }
 
+foreach ($db->query('SELECT due, start, complete FROM date') as $row)
+{
+ print '<p>';
+ print '<strong>' . $row['due'] . ' ' . $row['start'] . ' ' . $row['complete'] . '.';
+ print '<p>';
+}
+
+foreach ($db->query('SELECT expected, received FROM grade') as $row)
+{
+ print '<p>';
+ print '<strong>' . $row['expected'] . ' ' . $row['received'] . '.';
+ print '<p>';
+}
+
+foreach ($db->query('SELECT expected, actual FROM time') as $row)
+{
+ print '<p>';
+ print '<strong>' . $row['expected'] . ' ' . $row['actual'] . '.';
+ print '<p>';
+}
+
+
 ?>
 
 </body>
