@@ -24,7 +24,6 @@ $dbName = ltrim($dbopts["path"],'/');
 //print "<p>pgsql:host=$dbHost;port=$dbPort;dbname=$dbName</p>\n\n";
 
 $className = $classGrade = $dueDate = $startDate = $completeDate = $expectedGrade = $receivedGrade = $expectedTime = $actualTime = "";
-$classNameErr = $classGradeErr = $dueDateErr = $startDateErr = $completeDateErr = $expectedGradeErr = $receivedGradeErr = $expectedTimeErr = $actualTimeErr = "";
 
     
 if (isset($_POST) && !empty($_POST)){
@@ -93,7 +92,7 @@ else if($_POST["getData"] == "Time")
 	}
 }
 
- $db->exec("INSERT INTO class (name) VALUES ('$Other')");
+ $db->exec("INSERT INTO class (name) VALUES ('$newTopic')");
 
 ?>
 
