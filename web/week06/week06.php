@@ -23,10 +23,9 @@ $dbName = ltrim($dbopts["path"],'/');
 
 //print "<p>pgsql:host=$dbHost;port=$dbPort;dbname=$dbName</p>\n\n";
 
-//$className = $classGrade = $dueDate = $startDate = $completeDate = $expectedGrade = $receivedGrade = $expectedTime = $actualTime = "";
+$className = $classGrade = $dueDate = $startDate = $completeDate = $expectedGrade = $receivedGrade = $expectedTime = $actualTime = "";
 
     
-/*if (isset($_POST) && !empty($_POST)){
 	if($_POST['form'] == 'form1') {
 	if(!empty($_POST[''])){
                 $topics = $_POST["topics"];
@@ -41,7 +40,8 @@ $dbName = ltrim($dbopts["path"],'/');
             }
             else{
                 $topicErr = "Please select a topic";
-            }	*/
+            }
+            }	
 
 try {
  $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
