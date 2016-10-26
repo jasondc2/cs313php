@@ -25,9 +25,6 @@ $dbName = ltrim($dbopts["path"],'/');
 
 $className = $classGrade = $dueDate = $startDate = $completeDate = $expectedGrade = $receivedGrade = $expectedTime = $actualTime = "";
 
-    
-$className = $_POST["Other"];
-                     
 
 try {
  $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
@@ -36,6 +33,12 @@ catch (PDOException $ex) {
  print "<p>error: $ex->getMessage() </p>\n\n";
  die();
 }
+
+    
+$className = $_POST["Other"];
+                     
+
+$db->exec("INSERT INTO class (name) VALUES ('$className')");
 
 if($_POST["getData"] == "Classes")
 {
@@ -78,7 +81,7 @@ else if($_POST["getData"] == "Time")
 	}
 }
 
- $db->exec("INSERT INTO class (name) VALUES ('$className')");
+
 
 ?>
 
