@@ -23,6 +23,27 @@ $dbName = ltrim($dbopts["path"],'/');
 
 //print "<p>pgsql:host=$dbHost;port=$dbPort;dbname=$dbName</p>\n\n";
 
+$className = $classGrade = $dueDate = $startDate = $completeDate = $expectedGrade = $receivedGrade = $expectedTime = $actualTime = "";
+$classNameErr = $classGradeErr = $dueDateErr = $startDateErr = $completeDateErr = $expectedGradeErr = $receivedGradeErr = $expectedTimeErr = $actualTimeErr = "";
+
+    
+if (isset($_POST) && !empty($_POST)){
+	if($_POST['form'] == 'form1') {
+	if(!empty($_POST[''])){
+                $topics = $_POST["topics"];
+                        if(in_array("0", $topics)){
+                            if($_POST["Other"] != ""){
+                                $newTopic = $_POST["Other"];
+                            }
+                            else{
+                                $topicErr = "Please provide a topic next to the selected checkbox";
+                            }
+                        }
+            }
+            else{
+                $topicErr = "Please select a topic";
+            }	
+
 try {
  $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 }
@@ -72,6 +93,7 @@ else if($_POST["getData"] == "Time")
 	}
 }
 
+ $db->exec("INSERT INTO class (name) VALUES ('$Other')");
 
 ?>
 
